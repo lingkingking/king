@@ -29,3 +29,28 @@ with open('code.png','wb') as fn:
 #第二步:post提交验证码
 #提交验证码的url
 img_post_url ="https://kyfw.12306.cn/passport/captcha/captcha-check"
+#提交验证码的头部信息
+#建立请求对象
+req = urllib2.Request(img_post_url)
+#对象添加请求信息
+req.headers = img_headers
+#要提交的表单数据
+post_num = raw_input("请输入验证码")
+data={"answer":post_num,
+      "login_site":"E",
+      "rand":"sirand"}
+#数据转换成网站可以接受的字符串
+mydata = urllib.urlencode(datra)
+#发送post请求提交数据并返回数据
+img_post_htnl = opener.open(req,madata),read()
+#with open('img_post_html.text','wb') as fn:
+#            fn.write(img_post_html)
+print img_post_html
+#第三步:post提交账户信息登入
+#登入的url
+#登入的头部信息
+#建立请求对象
+#对象添加头部信息
+#组织要提交的表单信息
+#数据格式转换
+#发送post请求并返回数据
